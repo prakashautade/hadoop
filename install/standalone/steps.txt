@@ -1,0 +1,17 @@
+Install Hadoop in standalone mode
+=================================
+A] Install Java
+	1. Install java 8
+	2. Export JAVA_HOME from .bash_profile
+	3. Update PATH environment variable for $JAVA_HOME/bin location
+B] Install OpenSSH
+	1. Install OpenSSH
+	2. Enable public key authorization
+C] Install Hadoop
+	1. Extract Hadoop archive
+	2. Export HADOOP_HOME from .bash_profile
+	3. Update PATH environment variable for $HADOOP_HOME/bin location
+	4. Update $HADOOP_HOME/etc/hadoop/hadoop-env.sh to export $JAVA_HOME
+D] Check Hadoop installation
+	1. $HADOOP_HOME/bin/hadoop
+	2. $HADOOP_HOME/bin/hdfs
