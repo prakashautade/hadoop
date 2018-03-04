@@ -2,9 +2,12 @@
     sudo apt-add-repository ppa:webupd8team/java -y
 2. Update package database
     sudo apt-get update
+3. Accept Oracle license
+    sudo echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | sudo debconf-set-selections
+    sudo echo "debconf shared/accepted-oracle-license-v1-1 seen true" | sudo debconf-set-selections
 3. Install Oracle Java8
     sudo apt-get install oracle-java8-installer -y
 4. Set JAVA_HOME environment variable
-    sudo bash -c 'echo JAVA_HOME=/usr/lib/jvm/java-8-oracle >> /etc/environment'
-    sudo source /etc/environment
+    sudo bash -c "echo JAVA_HOME=/usr/lib/jvm/java-8-oracle >> /etc/environment"
+    sudo bash -c "source /etc/environment"
     echo $JAVA_HOME
